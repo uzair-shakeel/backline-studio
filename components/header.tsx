@@ -9,7 +9,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
+    <header className="fixed  top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
       <div className="max-w-[1650px] md:px-10 mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
@@ -69,55 +69,49 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-sm">
-          <nav className="container mx-auto px-4 py-6 flex flex-col space-y-4">
-            <Link
-              href="#"
-              className="text-white hover:text-orange-500 transition-colors py-2 border-b border-zinc-800"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Inicio
-            </Link>
-            <Link
-              href="#"
-              className="text-white hover:text-orange-500 transition-colors py-2 border-b border-zinc-800"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Nosotros
-            </Link>
-            <Link
-              href="#"
-              className="text-white hover:text-orange-500 transition-colors py-2 border-b border-zinc-800"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Servicios
-            </Link>
-            <Link
-              href="#"
-              className="text-white hover:text-orange-500 transition-colors py-2 border-b border-zinc-800"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Salas de Ensayo
-            </Link>
-            <Link
-              href="#"
-              className="text-white hover:text-orange-500 transition-colors py-2 border-b border-zinc-800"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contacto
-            </Link>
-            <Link
-              href="#reservar"
-              className="bg-orange-500 text-white px-4 py-3 rounded-full text-center font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Reservar Ahora
-            </Link>
-          </nav>
-        </div>
-      )}
+      <div className="relative">
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div
+            className={`md:hidden absolute left-0 right-0 bg-black/80 backdrop-blur-sm transition-all duration-300 ease-in-out ${
+              isMenuOpen ? "-top-[.35px] opacity-100" : "-top-[500px] opacity-0"
+            }`}
+          >
+            <nav className="container text-center mx-auto px-4 py-6 flex flex-col space-y-8">
+              <Link
+                href="#"
+                className="  text-white hover:text-orange-500 transition-colors"
+              >
+                Inicio
+              </Link>
+              <Link
+                href="#"
+                className="  text-white hover:text-orange-500 transition-colors"
+              >
+                Servicios
+              </Link>
+              <Link
+                href="#"
+                className="  text-white hover:text-orange-500 transition-colors"
+              >
+                Reglamento
+              </Link>
+              <Link
+                href="#"
+                className="  text-white hover:text-orange-500 transition-colors"
+              >
+                Sobre Nosotros
+              </Link>
+              <Link
+                href="#reservar"
+                className="inline-block bg-white hover:bg-transparent border border-white hover:text-white text-[14px] md:text-[16px] lg:text-[18px] rounded-full px-6 py-3 text-sm font-medium transition-all text-black"
+              >
+                Reservar Ahora
+              </Link>
+            </nav>
+          </div>
+        )}
+      </div>
     </header>
   );
 }
