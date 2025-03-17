@@ -22,39 +22,38 @@ export default function Home() {
             <video
               src="/hero.mp4"
               alt="Musician performing"
-              className="object-cover opacity-70"
+              className="w-full h-full object-cover opacity-70"
               autoPlay
               loop
               muted
               playsInline
-              priority
             />
           </div>
-          <div className="relative md:px-10 z-20 max-w-[1650px] mx-auto px-4 pt-24 md:pt-32 lg:pt-40">
+          <div className="relative flex flex-col items-center text-center md:items-start md:text-start md:px-10 z-20 max-w-[1650px] mx-auto px-4 pt-24 md:pt-32 lg:pt-40">
             <div className="flex gap-3 mb-6">
               <Link
                 href="#"
                 aria-label="Facebook"
-                className="w-8 h-8 p-1 rounded-full border border-white flex items-center justify-center"
+                className=" p-1 rounded-full border-2 border-white flex items-center justify-center"
               >
                 <img src="/icons/facebook.svg" alt="" />
               </Link>
               <Link
                 href="#"
                 aria-label="Instagram"
-                className="w-8 h-8 p-1 rounded-full border border-white flex items-center justify-center"
+                className=" p-1 rounded-full border-2 border-white flex items-center justify-center"
               >
                 <img src="/icons/instagram.svg" alt="" />
               </Link>
               <Link
                 href="#"
                 aria-label="Waze"
-                className="w-8 h-8 p-1 rounded-full border border-white flex items-center justify-center"
+                className=" p-1 rounded-full border-2 border-white flex items-center justify-center"
               >
                 <img src="/icons/waze.svg" alt="" />
               </Link>
             </div>
-            <h1 className="text-[32px] md:text-[44px] leading-[112px] md:leading-[66px] lg:text-[64px] font-[900] font-moderniz mb-4">
+            <h1 className="text-[32px] md:text-[44px] leading-[35px] md:leading-[46px] lg:leading-[66px] lg:text-[64px] font-[900] font-moderniz mb-4">
               TU ESPACIO DE
               <br />
               ENSAYO 24/7
@@ -74,29 +73,29 @@ export default function Home() {
 
         {/* Features Bar */}
         <section className="bg-black text-[16px] md:text-[24px] min-h-[150px] border-t border-b border-[#9A9A9A]">
-          <div className="max-w-[1650px] h-full mx-auto grid grid-cols-1 md:grid-cols-3">
-            <div className="py-4 px-6   text-center">
-              <p className="  min-h-[150px] font-[500] flex items-center uppercase tracking-wider">
+          <div className="max-w-[1650px] h-full mx-auto flex flex-nowrap overflow-x-auto md:grid md:grid-cols-3 md:overflow-x-hidden snap-x snap-mandatory">
+            <div className="min-w-[80vw] md:min-w-0 py-4 px-6 text-center snap-center">
+              <p className="min-h-[150px] font-[500] flex items-center justify-center uppercase tracking-wider">
                 MÁS DE 5 AÑOS DE EXPERIENCIA
               </p>
             </div>
-            <div className="py-4 px-6  text-center">
-              <p className="  min-h-[150px] font-[500] flex items-center uppercase tracking-wider">
-                EQUIPAMIENTO PROFESIONAL Y AMBIENTE PARA EXITO
+            <div className="min-w-[80vw] md:min-w-0 py-4 px-6 text-center snap-center">
+              <p className="min-h-[150px] font-[500] flex items-center justify-center uppercase tracking-wider">
+                EQUIPAMIENTO PROFESIONAL Y AMBIENTE PARA ÉXITO
               </p>
             </div>
-            <div className="py-4 px-6 text-center">
-              <p className="  min-h-[150px] font-[500] flex items-center uppercase tracking-wider">
+            <div className="min-w-[80vw] md:min-w-0 py-4 px-6 text-center snap-center">
+              <p className="min-h-[150px] font-[500] flex items-center justify-center uppercase tracking-wider">
                 EN COSTA RICA & DISPONIBLE 24/7
               </p>
             </div>
           </div>
         </section>
 
-        <section className="md:px-10 border-l border-r border-[#9A9A9A]  max-w-[1650px] mx-auto h-screen max-h-[700px] bg-black text-black relative overflow-hidden">
-          <div className="flex h-full">
+        <section className="border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto min-h-screen xl:min-h-full bg-black text-black relative overflow-hidden">
+          <div className="flex flex-col md:flex-row h-full">
             {/* Left side - Image */}
-            <div className="w-1/2 relative">
+            <div className="md:w-1/2 relative">
               <div className="absolute top-8 right-8 z-10">
                 <img src="/icons/arrow.svg" className="w-8 h-8 text-white" />
               </div>
@@ -113,9 +112,9 @@ export default function Home() {
             </div>
 
             {/* Right side - Content */}
-            <div className="w-1/2 bg-white p-5 xl:p-8">
-              <div className="max-w-xl">
-                <h2 className="font-moderniz text-[23px] md:text-[28px] lg:text-[51px] font-bold  tracking-tight">
+            <div className="md:w-1/2 bg-white p-5 xl:p-8">
+              <div className="max-w-xl mx-auto">
+                <h2 className="font-moderniz text-[23px] md:text-[28px] lg:text-[51px] font-bold tracking-tight">
                   NUESTRA HISTORIA
                 </h2>
                 <p className="text-[12px] md:text-[16px] lg:text-[18px] mb-6 leading-relaxed">
@@ -126,18 +125,18 @@ export default function Home() {
                   autoservicio.
                 </p>
 
-                <h3 className="font-moderniz text-[20px] lg:text-[24px] font-bold mb-3">
+                <h3 className="text-[20px] lg:text-[24px] font-bold mb-3">
                   ¿POR QUÉ NOSOTROS?
                 </h3>
 
                 <div className="space-y-4 text-[12px] md:text-[16px] lg:text-[18px]">
                   <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
                     <div className="flex-shrink-0">
-                      <div className="w-6 h-6  flex items-center justify-center">
+                      <div className="w-6 h-6 flex items-center justify-center">
                         <img src="/icons/current.svg" alt="" />
                       </div>
                     </div>
-                    <p className=" ">
+                    <p>
                       Salas de ensayo operando como un Airbnb (sin personal en
                       sitio)
                     </p>
@@ -145,22 +144,20 @@ export default function Home() {
 
                   <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
                     <div className="flex-shrink-0">
-                      <div className="w-6 h-6  flex items-center justify-center">
+                      <div className="w-6 h-6 flex items-center justify-center">
                         <img src="/icons/current.svg" alt="" />
                       </div>
                     </div>
-                    <p className=" ">Acceso 24/7 con código de ingreso</p>
+                    <p>Acceso 24/7 con código de ingreso</p>
                   </div>
 
                   <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
                     <div className="flex-shrink-0">
-                      <div className="w-6 h-6  flex items-center justify-center">
+                      <div className="w-6 h-6 flex items-center justify-center">
                         <img src="/icons/current.svg" alt="" />
                       </div>
                     </div>
-                    <p className=" ">
-                      Equipamiento profesional para músicos exigentes
-                    </p>
+                    <p>Equipamiento profesional para músicos exigentes</p>
                   </div>
                 </div>
               </div>
@@ -170,9 +167,9 @@ export default function Home() {
 
         {/* Mission Statement */}
 
-        <section className="  bg-black min-h-[600px] border-t border-b border-[#9A9A9A]">
+        <section className="  bg-black lg:min-h-[600px] border-t border-b border-[#9A9A9A]">
           <div className="relative py-16 md:px-10 border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto flex flex-col justify-center items-center">
-            <div className=" min-h-[600px]  flex flex-col justify-center  px-4 max-w-5xl text-justify">
+            <div className=" min-h-[250px] lg:min-h-[600px]  flex flex-col justify-center  px-4 max-w-5xl text-justify">
               <p className="text-center text-white/80 text-[14px] md:text-[26px] lg:text-[40px] leading-relaxed">
                 Nuestro objetivo es{" "}
                 <span className="font-bold text-white">romper barreras</span> y
@@ -190,15 +187,15 @@ export default function Home() {
                 .
               </p>
 
-              <div className="absolute md:px-20 font-moderniz bottom-20 right-0 left-0 flex justify-between mt-24">
+              <div className="absolute md:px-20 font-moderniz bottom-5 md:bottom-10 lg:bottom-20 md:right-0 left-3 right-3 md:left-0 flex justify-between mt-24">
                 <div className="flex items-end gap-2">
                   <img src="/icons/lock.svg" />
-                  <span className="uppercase font-[900] text-[20px] tracking-wider">
+                  <span className="uppercase font-[900] text-[12px] md:text-[16px] lg:text-[20px] tracking-wider">
                     LIBERTAD
                   </span>
                 </div>
                 <div className="flex items-end gap-2">
-                  <span className="uppercase font-[900] text-[20px] tracking-wider">
+                  <span className="uppercase font-[900] text-[12px] md:text-[16px] lg:text-[20px] tracking-wider">
                     CREATIVIDAD
                   </span>
                   <img src="/icons/bulb.svg" />
@@ -214,24 +211,21 @@ export default function Home() {
               <h2 className="font-moderniz text-[20px] md:text-[36px] lg:text-[64px] font-[900] tracking-wider">
                 NUESTROS SERVICIOS
               </h2>
-
-              <div className="absolute top-0 right-0">
-                <img
-                  src="/icons/arrow-down.svg"
-                  className="absolute right-0 "
-                />
-              </div>
+              <img
+                src="/icons/arrow-down.svg"
+                className="absolute md:block right-0 top-0 hidden "
+              />
             </section>
           </div>
         </div>
 
         {/* Our Services */}
         <section className="bg-black border-b border-[#9A9A9A]">
-          <div className="max-w-[1650px] border-l border-r border-[#9A9A9A] md:px-10 mx-auto px-4 ">
+          <div className="max-w-[1650px] border-l border-r border-[#9A9A9A] md:px-10 mx-auto  ">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
               {/* Service 1 */}
-              <div className="border-r border-[#9A9A9A] p-16">
-                <div className="mb-20">
+              <div className="border-b px-8 md:border-r border-[#9A9A9A] py-10  md:p-8 lg:p-16">
+                <div className="mb-10 md:mb-20">
                   <div className="w-16 h-16 p-1 rounded-full border border-purple-600 flex items-center justify-center">
                     <img src="/icons/car.svg" />
                   </div>
@@ -248,8 +242,8 @@ export default function Home() {
               </div>
 
               {/* Service 2 */}
-              <div className="border-r border-[#9A9A9A] p-16">
-                <div className="mb-20">
+              <div className="border-b md:border-b-0 md:border-r border-[#9A9A9A] py-10 px-8 md:p-8 lg:p-16">
+                <div className="mb-10 lg:mb-20">
                   <div className="w-16 h-16 p-1 rounded-full border border-purple-600 flex items-center justify-center">
                     <img src="/icons/eye.svg" />
                   </div>
@@ -266,8 +260,8 @@ export default function Home() {
               </div>
 
               {/* Service 3 */}
-              <div className="p-16">
-                <div className="mb-20">
+              <div className="py-10 px-8 md:p-8 lg:p-16">
+                <div className="mb-10 md:mb-20">
                   <div className="w-16 h-16 p-3 rounded-full border border-purple-600 flex items-center justify-center">
                     <img src="/icons/scale.svg" />
                   </div>
@@ -285,12 +279,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="md:px-10 border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto h-screen max-h-[900px] text-black relative overflow-hidden">
-          <div className="flex h-full max-h-[900px]">
+        <section className="border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto min-h-screen xl:min-h-full max-h-[900px] text-black relative overflow-hidden">
+          <div className="flex flex-col md:flex-row h-full max-h-[900px]">
             {/* Left side - Content */}
-            <div className="w-1/2 bg-white p-5 xl:p-8">
-              <div className="max-w-xl">
-                <h2 className="font-moderniz text-[23px] md:text-[28px] lg:text-[51px] font-[900]  tracking-tight">
+            <div className="md:w-1/2 bg-white p-5 xl:p-8">
+              <div className="max-w-xl mx-auto">
+                <h2 className="font-moderniz text-[23px] md:text-[28px] lg:text-[51px] font-[900] tracking-tight">
                   SALAS DE ENSAYO
                 </h2>
                 <p className="text-base text-[12px] md:text-[16px] lg:text-[18px] mb-6 leading-relaxed">
@@ -312,7 +306,7 @@ export default function Home() {
                         <img src="/icons/current-purple.svg" />
                       </div>
                     </div>
-                    <p className=" ">
+                    <p className="">
                       Batería PDP Custom Maple / Yamaha Custom Stage
                     </p>
                   </div>
@@ -323,7 +317,7 @@ export default function Home() {
                         <img src="/icons/current-purple.svg" />
                       </div>
                     </div>
-                    <p className=" ">
+                    <p className="">
                       Amplificadores (VOX AC15 / Boss Katana / Marshall
                       Valvestate)
                     </p>
@@ -335,7 +329,7 @@ export default function Home() {
                         <img src="/icons/current-purple.svg" />
                       </div>
                     </div>
-                    <p className=" ">3 Micrófonos Shure + cables XLR</p>
+                    <p className="">3 Micrófonos Shure + cables XLR</p>
                   </div>
 
                   <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
@@ -344,7 +338,7 @@ export default function Home() {
                         <img src="/icons/current-purple.svg" />
                       </div>
                     </div>
-                    <p className=" ">Mixer Yamaha MG12 (12 canales)</p>
+                    <p className="">Mixer Yamaha MG12 (12 canales)</p>
                   </div>
 
                   <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
@@ -353,14 +347,14 @@ export default function Home() {
                         <img src="/icons/current-purple.svg" />
                       </div>
                     </div>
-                    <p className=" ">Bose L1 para monitoreo</p>
+                    <p className="">Bose L1 para monitoreo</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right side - Image */}
-            <div className="w-1/2 relative">
+            <div className="md:w-1/2 relative">
               <div className="absolute top-8 right-8 z-10">
                 <Globe className="w-8 h-8 text-white" />
               </div>
@@ -386,12 +380,15 @@ export default function Home() {
               <h2 className="font-moderniz text-[20px] md:text-[36px] lg:text-[64px] font-[900] tracking-wider">
                 REGLAMENTO
               </h2>
-              <img src="/icons/alert.svg" className="absolute right-0 top-0" />
+              <img
+                src="/icons/alert.svg"
+                className="absolute right-0 top-0 hidden md:block"
+              />
             </section>
           </div>
         </div>
         <div className=" border-t border-b border-[#9A9A9A]">
-          <section className=" md:px-10 border-l border-r border-[#9A9A9A] h-[500px] max-w-[1650px] mx-auto  bg-black ">
+          <section className=" md:px-10 border-l border-r border-[#9A9A9A] md:h-[500px] max-w-[1650px] mx-auto  bg-black ">
             <div className="flex flex-col h-full">
               <div className="flex flex-col md:flex-row h-full ">
                 {/* Left side - Image */}
@@ -482,7 +479,10 @@ export default function Home() {
               <h2 className="font-moderniz text-[24px] md:text-[44px] lg:text-[96px] font-[900] tracking-wider">
                 EMPIEZA AHORA
               </h2>
-              <img src="/icons/expand.svg" className="absolute right-0 top-0" />
+              <img
+                src="/icons/expand.svg"
+                className="absolute right-0 top-0 hidden md:block"
+              />
             </section>
           </div>
         </div>
@@ -491,9 +491,9 @@ export default function Home() {
 
         <footer className="bg-black text-white">
           <div className="max-w-[1650px] border-l border-r border-[#9A9A9A] md:px-10 mx-auto">
-            <div className="flex flex-col md:flex-row  space-x-8 py-12 px-6">
+            <div className="flex flex-col gap-10 md:flex-row items-center text-center md:text-start md:items-start  space-x-8 py-12 px-6">
               {/* Logo and Description */}
-              <div className="md:w-1/3 lg:w-2/5">
+              <div className="w-full flex flex-col  items-center md:items-start md:w-1/3 lg:w-2/5">
                 <Image
                   src="/images/logo.png"
                   alt="Backline Studios Logo"
@@ -508,7 +508,7 @@ export default function Home() {
               </div>
 
               {/* Information */}
-              <div className="md:w-1/3 w-1/5 text-[16px] lg:text-[18px]">
+              <div className="w-full md:w-1/3 lg:w-1/5 text-[16px] lg:text-[18px]">
                 <h3 className="font-bold text-orange-500  mb-4 uppercase text-[18px] lg:text-[20px] tracking-wide">
                   Información
                 </h3>
@@ -549,7 +549,7 @@ export default function Home() {
               </div>
 
               {/* Social Media */}
-              <div className="w-1/5 hidden lg:block text-[16px] lg:text-[18px]">
+              <div className="lg:w-1/5 hidden lg:block text-[16px] lg:text-[18px]">
                 <h3 className=" text-orange-500 font-bold mb-4 uppercase text-[18px] lg:text-[20px] tracking-wide">
                   Redes Sociales
                 </h3>
@@ -596,8 +596,8 @@ export default function Home() {
 
           {/* Copyright and Social Icons */}
           <div className="border-t border-[#9A9A9A]">
-            <div className="max-w-[1650px] mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-[16px] lg:text-[18px] text-gray-500">
+            <div className="max-w-[1650px] mx-auto px-6 py-4 gap-8 flex flex-col md:flex-row justify-between items-center">
+              <p className="text-center md:text-start text-[16px] lg:text-[18px] text-gray-500">
                 © 2025 Backline Studios. Todos los derechos reservados.
               </p>
               <div className="flex gap-3 mb-6">
