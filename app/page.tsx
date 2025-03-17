@@ -99,7 +99,10 @@ export default function Home() {
               <div className="absolute top-8 right-8 z-10">
                 <img src="/icons/arrow.svg" className="w-8 h-8 text-white" />
               </div>
-              <div className="h-full w-full relative">
+              <div
+                className="h-full w-full relative"
+                style={{ minHeight: "400px" }}
+              >
                 <Image
                   src="/images/section-1.png"
                   alt="Drummer performing"
