@@ -390,11 +390,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            {/* Right side - Placeholder for layout on small/medium devices */}
-            <div className="w-full md:w-1/2 h-[400px] md:h-full xl:hidden relative">
-              {/* This div is only for spacing on small and medium devices */}
-            </div>
           </div>
         </section>
 
