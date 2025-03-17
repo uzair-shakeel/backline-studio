@@ -94,6 +94,10 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        montserrat: ["var(--font-montserrat)", "sans-serif"], // Montserrat from Google Fonts
+        moderniz: ["var(--font-moderniz)", "sans-serif"], // Moderniz from local fonts
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

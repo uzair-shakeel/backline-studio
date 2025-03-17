@@ -30,7 +30,7 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="relative z-20 container mx-auto px-4 pt-24 md:pt-32 lg:pt-40">
+          <div className="relative md:px-10 z-20 max-w-[1650px] mx-auto px-4 pt-24 md:pt-32 lg:pt-40">
             <div className="flex gap-3 mb-6">
               <Link
                 href="#"
@@ -54,7 +54,7 @@ export default function Home() {
                 <img src="/icons/waze.svg" alt="" />
               </Link>
             </div>
-            <h1 className="text-[32px] md:text-[44px] leading-[112px] md:leading-[60px] lg:text-[64px] font-[900] mb-4">
+            <h1 className="text-[32px] md:text-[44px] leading-[112px] md:leading-[66px] lg:text-[64px] font-[900] font-moderniz mb-4">
               TU ESPACIO DE
               <br />
               ENSAYO 24/7
@@ -74,7 +74,7 @@ export default function Home() {
 
         {/* Features Bar */}
         <section className="bg-black text-[16px] md:text-[24px] min-h-[150px] border-t border-b border-[#9A9A9A]">
-          <div className="container h-full mx-auto grid grid-cols-1 md:grid-cols-3">
+          <div className="max-w-[1650px] h-full mx-auto grid grid-cols-1 md:grid-cols-3">
             <div className="py-4 px-6   text-center">
               <p className="  min-h-[150px] font-[500] flex items-center uppercase tracking-wider">
                 MÁS DE 5 AÑOS DE EXPERIENCIA
@@ -93,7 +93,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="md:px-20 h-screen max-h-[700px] bg-black text-black relative overflow-hidden">
+        <section className="md:px-10 border-l border-r border-[#9A9A9A]  max-w-[1650px] mx-auto h-screen max-h-[700px] bg-black text-black relative overflow-hidden">
           <div className="flex h-full">
             {/* Left side - Image */}
             <div className="w-1/2 relative">
@@ -115,7 +115,7 @@ export default function Home() {
             {/* Right side - Content */}
             <div className="w-1/2 bg-white p-5 xl:p-8">
               <div className="max-w-xl">
-                <h2 className="text-[23px] md:text-[28px] lg:text-[51px] font-bold  tracking-tight">
+                <h2 className="font-moderniz text-[23px] md:text-[28px] lg:text-[51px] font-bold  tracking-tight">
                   NUESTRA HISTORIA
                 </h2>
                 <p className="text-[12px] md:text-[16px] lg:text-[18px] mb-6 leading-relaxed">
@@ -126,7 +126,7 @@ export default function Home() {
                   autoservicio.
                 </p>
 
-                <h3 className="text-[20px] lg:text-[24px] font-bold mb-3">
+                <h3 className="font-moderniz text-[20px] lg:text-[24px] font-bold mb-3">
                   ¿POR QUÉ NOSOTROS?
                 </h3>
 
@@ -170,8 +170,8 @@ export default function Home() {
 
         {/* Mission Statement */}
 
-        <section className=" py-16 bg-black min-h-[600px] border-t border-b border-[#9A9A9A]">
-          <div className="relative  container mx-auto flex flex-col justify-center items-center"> 
+        <section className="  bg-black min-h-[600px] border-t border-b border-[#9A9A9A]">
+          <div className="relative py-16 md:px-10 border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto flex flex-col justify-center items-center">
             <div className=" min-h-[600px]  flex flex-col justify-center  px-4 max-w-5xl text-justify">
               <p className="text-center text-white/80 text-[14px] md:text-[26px] lg:text-[40px] leading-relaxed">
                 Nuestro objetivo es{" "}
@@ -190,7 +190,7 @@ export default function Home() {
                 .
               </p>
 
-              <div className="absolute bottom-0 right-0 left-0 flex justify-between mt-24">
+              <div className="absolute md:px-20 font-moderniz bottom-20 right-0 left-0 flex justify-between mt-24">
                 <div className="flex items-end gap-2">
                   <img src="/icons/lock.svg" />
                   <span className="uppercase font-[900] text-[20px] tracking-wider">
@@ -209,9 +209,9 @@ export default function Home() {
         </section>
 
         <div className="border-t border-b text-center border-[#9A9A9A]">
-          <div className="max-w-[1550px] py-2 md:py-4 lg:py-6 mx-auto md:px-20 container  px-4">
+          <div className=" py-2 md:py-4 lg:py-6 mx-auto md:px-10 border-l border-r border-[#9A9A9A] max-w-[1650px]  px-4">
             <section className="relative  py-6 px-8 flex justify-center items-center">
-              <h2 className="text-[20px] md:text-[36px] lg:text-[64px] font-[900] tracking-wider">
+              <h2 className="font-moderniz text-[20px] md:text-[36px] lg:text-[64px] font-[900] tracking-wider">
                 NUESTROS SERVICIOS
               </h2>
 
@@ -227,7 +227,7 @@ export default function Home() {
 
         {/* Our Services */}
         <section className="bg-black border-b border-[#9A9A9A]">
-          <div className="container mx-auto px-4 ">
+          <div className="max-w-[1650px] border-l border-r border-[#9A9A9A] md:px-10 mx-auto px-4 ">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
               {/* Service 1 */}
               <div className="border-r border-[#9A9A9A] p-16">
@@ -237,7 +237,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h3 className=" lg:text-[32px] font-[900] text-[20px] mb-4">
+                <h3 className="font-moderniz lg:text-[32px] font-[900] text-[20px] mb-4">
                   PARQUEO
                 </h3>
                 <p className="text-gray-400 text-[18px] leading-relaxed">
@@ -255,7 +255,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h3 className="lg:text-[32px] font-[900] text-[20px] mb-4">
+                <h3 className="font-moderniz lg:text-[32px] font-[900] text-[20px] mb-4">
                   SEGURIDAD 24/7
                 </h3>
                 <p className="text-gray-400 text-[18px] leading-relaxed">
@@ -273,7 +273,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h3 className="lg:text-[32px] font-[900] text-[20px] mb-4">
+                <h3 className="font-moderniz lg:text-[32px] font-[900] text-[20px] mb-4">
                   ESPACIOS
                 </h3>
                 <p className="text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-relaxed">
@@ -285,12 +285,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="md:px-20 h-screen max-h-[900px] text-black relative overflow-hidden">
+        <section className="md:px-10 border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto h-screen max-h-[900px] text-black relative overflow-hidden">
           <div className="flex h-full max-h-[900px]">
             {/* Left side - Content */}
             <div className="w-1/2 bg-white p-5 xl:p-8">
               <div className="max-w-xl">
-                <h2 className="text-[23px] md:text-[28px] lg:text-[51px] font-[900]  tracking-tight">
+                <h2 className="font-moderniz text-[23px] md:text-[28px] lg:text-[51px] font-[900]  tracking-tight">
                   SALAS DE ENSAYO
                 </h2>
                 <p className="text-base text-[12px] md:text-[16px] lg:text-[18px] mb-6 leading-relaxed">
@@ -301,7 +301,7 @@ export default function Home() {
                   complicaciones.
                 </p>
 
-                <h3 className="text-[20px] lg:text-[24px] font-[900] mb-3 xl:mb-6">
+                <h3 className="font-moderniz text-[20px] lg:text-[24px] font-[900] mb-3 xl:mb-6">
                   EQUIPAMIENTO
                 </h3>
 
@@ -381,9 +381,9 @@ export default function Home() {
         {/* Regulations Section */}
         {/* Header */}
         <div className="border-t text-center border-[#9A9A9A]">
-          <div className="max-w-[1550px] mx-auto py-2 md:py-4 lg:py-6 md:px-20 container  px-4">
+          <div className=" mx-auto py-2 md:py-4 lg:py-6 md:px-10 border-l border-r border-[#9A9A9A] max-w-[1650px]  px-4">
             <section className="relative py-6 px-8 flex justify-center items-center">
-              <h2 className="text-[20px] md:text-[36px] lg:text-[64px] font-[900] tracking-wider">
+              <h2 className="font-moderniz text-[20px] md:text-[36px] lg:text-[64px] font-[900] tracking-wider">
                 REGLAMENTO
               </h2>
               <img src="/icons/alert.svg" className="absolute right-0 top-0" />
@@ -391,7 +391,7 @@ export default function Home() {
           </div>
         </div>
         <div className=" border-t border-b border-[#9A9A9A]">
-          <section className=" md:px-20 h-[500px] max-w-[1550px] mx-auto  bg-black ">
+          <section className=" md:px-10 border-l border-r border-[#9A9A9A] h-[500px] max-w-[1650px] mx-auto  bg-black ">
             <div className="flex flex-col h-full">
               <div className="flex flex-col md:flex-row h-full ">
                 {/* Left side - Image */}
@@ -477,9 +477,9 @@ export default function Home() {
         </div>
 
         <div className="border-b text-center border-[#9A9A9A]">
-          <div className="max-w-[1550px] mx-auto py-3 md:py-5 lg:py-8 md:px-20 container  px-4">
+          <div className=" mx-auto py-3 md:py-5 lg:py-8 border-l border-r border-[#9A9A9A] md:px-10 max-w-[1650px]  px-4">
             <section className="relative  py-6 px-8 flex justify-center items-center">
-              <h2 className="text-[24px] md:text-[44px] lg:text-[96px] font-[900] tracking-wider">
+              <h2 className="font-moderniz text-[24px] md:text-[44px] lg:text-[96px] font-[900] tracking-wider">
                 EMPIEZA AHORA
               </h2>
               <img src="/icons/expand.svg" className="absolute right-0 top-0" />
@@ -490,8 +490,8 @@ export default function Home() {
         {/* Footer */}
 
         <footer className="bg-black text-white">
-          <div className="container mx-auto">
-            <div className="flex flex-col md:flex-row space-x-8 py-12 px-6">
+          <div className="max-w-[1650px] border-l border-r border-[#9A9A9A] md:px-10 mx-auto">
+            <div className="flex flex-col md:flex-row  space-x-8 py-12 px-6">
               {/* Logo and Description */}
               <div className="md:w-1/3 lg:w-2/5">
                 <Image
@@ -501,22 +501,22 @@ export default function Home() {
                   height={40}
                   className="mb-4"
                 />
-                <p className="text-sm text-gray-400 leading-relaxed">
+                <p className="text-[16px] lg:text-[18px] text-gray-400 leading-relaxed">
                   Espacio de ensayo 24/7 con autoservicio y equipamiento
                   profesional. Reserva, accede y crea sin límites.
                 </p>
               </div>
 
               {/* Information */}
-              <div className="md:w-1/3 w-1/5">
-                <h3 className="text-orange-500 font-medium mb-4 uppercase text-sm tracking-wide">
+              <div className="md:w-1/3 w-1/5 text-[16px] lg:text-[18px]">
+                <h3 className="font-bold text-orange-500  mb-4 uppercase text-[18px] lg:text-[20px] tracking-wide">
                   Información
                 </h3>
                 <ul className="space-y-2">
                   <li>
                     <Link
                       href="#"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className=" text-gray-400 hover:text-white transition-colors"
                     >
                       Sobre Nosotros
                     </Link>
@@ -524,7 +524,7 @@ export default function Home() {
                   <li>
                     <Link
                       href="#"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className=" text-gray-400 hover:text-white transition-colors"
                     >
                       Reglamento
                     </Link>
@@ -532,7 +532,7 @@ export default function Home() {
                   <li>
                     <Link
                       href="#"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className=" text-gray-400 hover:text-white transition-colors"
                     >
                       Tarifas
                     </Link>
@@ -540,7 +540,7 @@ export default function Home() {
                   <li>
                     <Link
                       href="#"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className=" text-gray-400 hover:text-white transition-colors"
                     >
                       Servicios
                     </Link>
@@ -549,15 +549,15 @@ export default function Home() {
               </div>
 
               {/* Social Media */}
-              <div className="w-1/5 hidden lg:block">
-                <h3 className="text-orange-500 font-medium mb-4 uppercase text-sm tracking-wide">
+              <div className="w-1/5 hidden lg:block text-[16px] lg:text-[18px]">
+                <h3 className=" text-orange-500 font-bold mb-4 uppercase text-[18px] lg:text-[20px] tracking-wide">
                   Redes Sociales
                 </h3>
                 <ul className="space-y-2">
                   <li>
                     <Link
                       href="#"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className=" text-gray-400 hover:text-white transition-colors"
                     >
                       Instagram
                     </Link>
@@ -565,7 +565,7 @@ export default function Home() {
                   <li>
                     <Link
                       href="#"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className=" text-gray-400 hover:text-white transition-colors"
                     >
                       Facebook
                     </Link>
@@ -573,7 +573,7 @@ export default function Home() {
                   <li>
                     <Link
                       href="#"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className=" text-gray-400 hover:text-white transition-colors"
                     >
                       Waze
                     </Link>
@@ -582,13 +582,13 @@ export default function Home() {
               </div>
 
               {/* Contact */}
-              <div className="md:w-1/3 lg:w-1/5">
-                <h3 className="text-orange-500 font-medium mb-4 uppercase text-sm tracking-wide">
+              <div className="md:w-1/3 lg:w-1/5 text-[16px] lg:text-[18px]">
+                <h3 className=" text-orange-500 font-bold mb-4 uppercase text-[18px] lg:text-[20px] tracking-wide">
                   Contacto
                 </h3>
                 <ul className="space-y-2">
-                  <li className="text-sm text-gray-400">Correo Electrónico:</li>
-                  <li className="text-sm text-gray-400">Teléfono: 8340-8304</li>
+                  <li className=" text-gray-400">Correo Electrónico:</li>
+                  <li className=" text-gray-400">Teléfono: 8340-8304</li>
                 </ul>
               </div>
             </div>
@@ -596,8 +596,8 @@ export default function Home() {
 
           {/* Copyright and Social Icons */}
           <div className="border-t border-[#9A9A9A]">
-            <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-xs text-gray-500">
+            <div className="max-w-[1650px] mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+              <p className="text-[16px] lg:text-[18px] text-gray-500">
                 © 2025 Backline Studios. Todos los derechos reservados.
               </p>
               <div className="flex gap-3 mb-6">

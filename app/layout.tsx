@@ -20,11 +20,6 @@ const moderniz = localFont({
       weight: "400",
       style: "normal",
     },
-    {
-      path: "../public/fonts/Montserrat-Regular.ttf",
-      weight: "700",
-      style: "normal",
-    },
   ],
   variable: "--font-moderniz",
   display: "swap",
@@ -45,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${moderniz.variable} ${montserrat.variable} font-moderniz`}
+        className={`${montserrat.variable} font-montserrat ${moderniz.variable}`}
       >
         {children}
       </body>
