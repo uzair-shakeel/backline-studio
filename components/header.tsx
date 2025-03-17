@@ -49,7 +49,7 @@ export default function Header() {
             </Link>
             <Link
               href="#reservar"
-              className="bg-white text-black px-4 py-2 rounded-full  font-medium hover:bg-orange-500 hover:text-white transition-colors"
+              className="inline-block bg-white hover:bg-transparent border border-white hover:text-white text-[14px] md:text-[16px] lg:text-[18px] rounded-full px-6 py-3 text-sm font-medium transition-all text-black"
             >
               Reservar Ahora
             </Link>

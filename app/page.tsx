@@ -92,10 +92,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto min-h-screen xl:min-h-full bg-black text-black relative overflow-hidden">
+        <section className="border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto min-h-screen xl:min-h-auto bg-black text-black relative overflow-hidden">
           <div className="flex flex-col md:flex-row h-full">
             {/* Left side - Image */}
-            <div className="md:w-1/2 relative">
+            <div className="w-full md:w-1/2 h-[400px] md:h-full relative">
               <div className="absolute top-8 right-8 z-10">
                 <img src="/icons/arrow.svg" className="w-8 h-8 text-white" />
               </div>
@@ -112,7 +112,7 @@ export default function Home() {
             </div>
 
             {/* Right side - Content */}
-            <div className="md:w-1/2 bg-white p-5 xl:p-8">
+            <div className="w-full md:w-1/2 bg-white p-5 xl:p-8">
               <div className="max-w-xl mx-auto">
                 <h2 className="font-moderniz text-[23px] md:text-[28px] lg:text-[51px] font-bold tracking-tight">
                   NUESTRA HISTORIA
@@ -279,10 +279,45 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto min-h-screen xl:min-h-full max-h-[900px] text-black relative overflow-hidden">
-          <div className="flex flex-col md:flex-row h-full max-h-[900px]">
+        <section className="border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto min-h-screen xl:min-h-auto text-black relative overflow-hidden">
+          <div className="relative flex flex-col md:flex-row h-full">
+            {/* Image for Mobile and Medium Screens */}
+            <div className="xl:hidden w-full h-[400px] md:h-full">
+              <div className="relative h-full w-full">
+                <Image
+                  src="/images/section-2.png"
+                  alt="Guitarist performing"
+                  width={800}
+                  height={400}
+                  className="object-cover w-full h-full"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/70 to-yellow-600/30"></div>
+              </div>
+              <div className="absolute top-8 right-8 z-10">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+            </div>
+
+            {/* Image for Large Screens (Desktop) */}
+            <div className="hidden xl:block absolute inset-0 w-full h-full">
+              <div className="relative h-full w-full">
+                <Image
+                  src="/images/section-2.png"
+                  alt="Guitarist performing"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/70 to-yellow-600/30"></div>
+              </div>
+              <div className="absolute top-8 right-8 z-10">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+            </div>
+
             {/* Left side - Content */}
-            <div className="md:w-1/2 bg-white p-5 xl:p-8">
+            <div className="relative w-full md:w-1/2 bg-white p-5 xl:p-8 xl:bg-opacity-90 z-20">
               <div className="max-w-xl mx-auto">
                 <h2 className="font-moderniz text-[23px] md:text-[28px] lg:text-[51px] font-[900] tracking-tight">
                   SALAS DE ENSAYO
@@ -353,21 +388,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right side - Image */}
-            <div className="md:w-1/2 relative">
-              <div className="absolute top-8 right-8 z-10">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <div className="h-full w-full relative">
-                <Image
-                  src="/images/section-2.png"
-                  alt="Guitarist performing"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/70 to-yellow-600/30"></div>
-              </div>
+            {/* Right side - Placeholder for layout on small/medium devices */}
+            <div className="w-full md:w-1/2 h-[400px] md:h-full xl:hidden relative">
+              {/* This div is only for spacing on small and medium devices */}
             </div>
           </div>
         </section>
