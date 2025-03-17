@@ -29,7 +29,7 @@ export default function Home() {
               playsInline
             />
           </div>
-          <div className="relative flex flex-col items-center text-center md:items-start md:text-start md:px-10 z-20 max-w-[1650px] mx-auto px-4 pt-24 md:pt-32 lg:pt-40">
+          <div className="relative flex flex-col items-center pt-40 text-center md:items-start md:text-start md:px-10 z-20 max-w-[1650px] mx-auto px-4 md:pt-24 md:pt-32 lg:pt-40">
             <div className="flex gap-3 mb-6">
               <Link
                 href="#"
