@@ -1,5 +1,7 @@
 "use client";
 
+import type React from "react";
+
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,14 +10,26 @@ import { Menu, X } from "lucide-react";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false); // Close mobile menu after clicking
+    }
+  };
+
   return (
-    <header className="fixed  top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
       <div className="max-w-[1650px] md:px-10 mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
             <Image
               src="/images/logo.png"
-              className="w-[150px] h-auto "
+              className="w-[150px] h-auto"
               alt="Backline Studios Logo"
               width={120}
               height={40}
@@ -23,36 +37,41 @@ export default function Header() {
           </Link>
 
           <nav className="hidden text-[16px] md:flex items-center space-x-6">
-            <Link
-              href="#"
-              className="  text-white hover:text-orange-500 transition-colors"
+            <a
+              href="#Inicio"
+              onClick={(e) => scrollToSection(e, "Inicio")}
+              className="text-white hover:text-orange-500 transition-colors"
             >
               Inicio
-            </Link>
-            <Link
-              href="#"
-              className="  text-white hover:text-orange-500 transition-colors"
+            </a>
+            <a
+              href="#Servicios"
+              onClick={(e) => scrollToSection(e, "Servicios")}
+              className="text-white hover:text-orange-500 transition-colors"
             >
               Servicios
-            </Link>
-            <Link
-              href="#"
-              className="  text-white hover:text-orange-500 transition-colors"
+            </a>
+            <a
+              href="#Reglamento"
+              onClick={(e) => scrollToSection(e, "Reglamento")}
+              className="text-white hover:text-orange-500 transition-colors"
             >
               Reglamento
-            </Link>
-            <Link
-              href="#"
-              className="  text-white hover:text-orange-500 transition-colors"
+            </a>
+            <a
+              href="#Sobre-Nosotros"
+              onClick={(e) => scrollToSection(e, "Sobre-Nosotros")}
+              className="text-white hover:text-orange-500 transition-colors"
             >
               Sobre Nosotros
-            </Link>
-            <Link
+            </a>
+            <a
               href="#reservar"
+              onClick={(e) => scrollToSection(e, "reservar")}
               className="inline-block bg-white hover:bg-transparent border border-white hover:text-white text-[14px] md:text-[16px] lg:text-[18px] rounded-full px-6 py-3 text-sm font-medium transition-all text-black"
             >
               Reservar Ahora
-            </Link>
+            </a>
           </nav>
 
           <button
@@ -78,36 +97,41 @@ export default function Header() {
             }`}
           >
             <nav className="container text-center mx-auto px-4 py-6 flex flex-col space-y-8">
-              <Link
-                href="#"
-                className="  text-white hover:text-orange-500 transition-colors"
+              <a
+                href="#Inicio"
+                onClick={(e) => scrollToSection(e, "Inicio")}
+                className="text-white hover:text-orange-500 transition-colors"
               >
                 Inicio
-              </Link>
-              <Link
-                href="#"
-                className="  text-white hover:text-orange-500 transition-colors"
+              </a>
+              <a
+                href="#Servicios"
+                onClick={(e) => scrollToSection(e, "Servicios")}
+                className="text-white hover:text-orange-500 transition-colors"
               >
                 Servicios
-              </Link>
-              <Link
-                href="#"
-                className="  text-white hover:text-orange-500 transition-colors"
+              </a>
+              <a
+                href="#Reglamento"
+                onClick={(e) => scrollToSection(e, "Reglamento")}
+                className="text-white hover:text-orange-500 transition-colors"
               >
                 Reglamento
-              </Link>
-              <Link
-                href="#"
-                className="  text-white hover:text-orange-500 transition-colors"
+              </a>
+              <a
+                href="#Sobre-Nosotros"
+                onClick={(e) => scrollToSection(e, "Sobre-Nosotros")}
+                className="text-white hover:text-orange-500 transition-colors"
               >
                 Sobre Nosotros
-              </Link>
-              <Link
+              </a>
+              <a
                 href="#reservar"
+                onClick={(e) => scrollToSection(e, "reservar")}
                 className="inline-block bg-white hover:bg-transparent border border-white hover:text-white text-[14px] md:text-[16px] lg:text-[18px] rounded-full px-6 py-3 text-sm font-medium transition-all text-black"
               >
                 Reservar Ahora
-              </Link>
+              </a>
             </nav>
           </div>
         )}

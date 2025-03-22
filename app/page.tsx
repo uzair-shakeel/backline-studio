@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -11,12 +12,27 @@ import {
 import Header from "@/components/header";
 
 export default function Home() {
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false); // Close mobile menu after clicking
+    }
+  };
+
   return (
     <>
       <Header />
       <main className="bg-black text-white min-h-screen">
         {/* Hero Section */}
-        <section className="relative h-[90vh] md:h-[80vh] lg:h-screen">
+        <section
+          id="Inicio"
+          className="relative h-[90vh] md:h-[80vh] lg:h-screen"
+        >
           {/* <div className="absolute inset-0 bg-gradient-to-b from-red-900/70 to-black/80 z-10"></div> */}
           <div className="absolute inset-0 overflow-hidden">
             <video
@@ -32,27 +48,34 @@ export default function Home() {
           <div className="relative flex flex-col items-center pt-40 text-center md:items-start md:text-start md:px-10 z-20 max-w-[1650px] mx-auto px-4 md:pt-24 md:pt-32 lg:pt-40">
             <div className="flex gap-3 mb-6">
               <Link
-                href="#"
+                href="https://www.facebook.com/backlinestudios/?locale=es_LA"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
-                className=" p-1 rounded-full border-2 border-white flex items-center justify-center"
+                className="p-1 rounded-full border-2 border-white flex items-center justify-center"
               >
-                <img src="/icons/facebook.svg" alt="" />
+                <img src="/icons/facebook.svg" alt="Facebook" />
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/backlinestudioscr/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
-                className=" p-1 rounded-full border-2 border-white flex items-center justify-center"
+                className="p-1 rounded-full border-2 border-white flex items-center justify-center"
               >
-                <img src="/icons/instagram.svg" alt="" />
+                <img src="/icons/instagram.svg" alt="Instagram" />
               </Link>
               <Link
-                href="#"
+                href="https://ul.waze.com/ul?place=ChIJ9QQLlir9oI8RAGrr5bC2on0&ll=9.9293972,-84.13384620&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Waze"
-                className=" p-1 rounded-full border-2 border-white flex items-center justify-center"
+                className="p-1 rounded-full border-2 border-white flex items-center justify-center"
               >
-                <img src="/icons/waze.svg" alt="" />
+                <img src="/icons/waze.svg" alt="Waze" />
               </Link>
             </div>
+
             <h1 className="text-[32px] md:text-[44px] leading-[35px] md:leading-[46px] lg:leading-[66px] lg:text-[64px] font-[900] font-moderniz mb-4">
               TU ESPACIO DE
               <br />
@@ -115,7 +138,10 @@ export default function Home() {
             </div>
 
             {/* Right side - Content */}
-            <div className="w-full md:w-1/2 bg-white p-5 xl:p-8">
+            <div
+              id="Sobre-Nosotros"
+              className="w-full md:w-1/2 bg-white p-5 xl:p-8"
+            >
               <div className="max-w-xl mx-auto">
                 <h2 className="font-moderniz text-[23px] md:text-[28px] lg:text-[51px] font-bold tracking-tight">
                   NUESTRA HISTORIA
@@ -208,7 +234,10 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="border-t border-b text-center border-[#9A9A9A]">
+        <div
+          id="Servicios"
+          className="border-t border-b text-center border-[#9A9A9A]"
+        >
           <div className=" py-2 md:py-4 lg:py-6 mx-auto md:px-10 border-l border-r border-[#9A9A9A] max-w-[1650px]  px-4">
             <section className="relative  py-6 px-8 flex justify-center items-center">
               <h2 className="font-moderniz text-[20px] md:text-[36px] lg:text-[64px] font-[900] tracking-wider">
@@ -395,7 +424,7 @@ export default function Home() {
 
         {/* Regulations Section */}
         {/* Header */}
-        <div className="border-t text-center border-[#9A9A9A]">
+        <div id="Reglamento" className="border-t text-center border-[#9A9A9A]">
           <div className=" mx-auto py-2 md:py-4 lg:py-6 md:px-10 border-l border-r border-[#9A9A9A] max-w-[1650px]  px-4">
             <section className="relative py-6 px-8 flex justify-center items-center">
               <h2 className="font-moderniz text-[20px] md:text-[36px] lg:text-[64px] font-[900] tracking-wider">
@@ -494,7 +523,7 @@ export default function Home() {
           </section>
         </div>
 
-        <div className="border-b text-center border-[#9A9A9A]">
+        <div id="Tarifas" className="border-b text-center border-[#9A9A9A]">
           <div className=" mx-auto py-3 md:py-5 lg:py-8 border-l border-r border-[#9A9A9A] md:px-10 max-w-[1650px]  px-4">
             <section className="relative  py-6 px-8 flex justify-center items-center">
               <h2 className="font-moderniz text-[24px] md:text-[44px] lg:text-[96px] font-[900] tracking-wider">
@@ -533,68 +562,70 @@ export default function Home() {
                 <h3 className="font-bold text-orange-500  mb-4 uppercase text-[18px] lg:text-[20px] tracking-wide">
                   Información
                 </h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link
-                      href="#"
-                      className=" text-gray-400 hover:text-white transition-colors"
-                    >
-                      Sobre Nosotros
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className=" text-gray-400 hover:text-white transition-colors"
-                    >
-                      Reglamento
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className=" text-gray-400 hover:text-white transition-colors"
-                    >
-                      Tarifas
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className=" text-gray-400 hover:text-white transition-colors"
-                    >
-                      Servicios
-                    </Link>
-                  </li>
+                <ul className="flex flex-col gap-2">
+                  <a
+                    href="#Reglamento"
+                    onClick={(e) => scrollToSection(e, "Reglamento")}
+                    className=" text-gray-400 hover:text-white transition-colors"
+                  >
+                    Reglamento
+                  </a>
+                  <a
+                    href="#Sobre-Nosotros"
+                    onClick={(e) => scrollToSection(e, "Sobre-Nosotros")}
+                    className=" text-gray-400 hover:text-white transition-colors"
+                  >
+                    Sobre Nosotros
+                  </a>
+                  <a
+                    href="#Tarifas"
+                    onClick={(e) => scrollToSection(e, "Tarifas")}
+                    className=" text-gray-400 hover:text-white transition-colors"
+                  >
+                    Tarifas
+                  </a>
+                  <a
+                    href="#Servicios"
+                    onClick={(e) => scrollToSection(e, "Servicios")}
+                    className=" text-gray-400 hover:text-white transition-colors"
+                  >
+                    Servicios
+                  </a>
                 </ul>
               </div>
 
               {/* Social Media */}
               <div className="lg:w-1/5 hidden lg:block text-[16px] lg:text-[18px]">
-                <h3 className=" text-orange-500 font-bold mb-4 uppercase text-[18px] lg:text-[20px] tracking-wide">
+                <h3 className="text-orange-500 font-bold mb-4 uppercase text-[18px] lg:text-[20px] tracking-wide">
                   Redes Sociales
                 </h3>
                 <ul className="space-y-2">
                   <li>
                     <Link
-                      href="#"
-                      className=" text-gray-400 hover:text-white transition-colors"
+                      href="https://www.instagram.com/backlinestudioscr/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors"
                     >
                       Instagram
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="#"
-                      className=" text-gray-400 hover:text-white transition-colors"
+                      href="https://www.facebook.com/backlinestudios/?locale=es_LA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors"
                     >
                       Facebook
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="#"
-                      className=" text-gray-400 hover:text-white transition-colors"
+                      href="https://ul.waze.com/ul?place=ChIJ9QQLlir9oI8RAGrr5bC2on0&ll=9.9293972,-84.13384620&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors"
                     >
                       Waze
                     </Link>
@@ -623,25 +654,31 @@ export default function Home() {
               </p>
               <div className="flex gap-3 mb-6">
                 <Link
-                  href="#"
+                  href="https://www.facebook.com/backlinestudios/?locale=es_LA"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Facebook"
                   className="w-8 h-8 p-1 rounded-full border border-white flex items-center justify-center"
                 >
-                  <img src="/icons/facebook.svg" alt="" />
+                  <img src="/icons/facebook.svg" alt="Facebook" />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.instagram.com/backlinestudioscr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
                   className="w-8 h-8 p-1 rounded-full border border-white flex items-center justify-center"
                 >
-                  <img src="/icons/instagram.svg" alt="" />
+                  <img src="/icons/instagram.svg" alt="Instagram" />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://ul.waze.com/ul?place=ChIJ9QQLlir9oI8RAGrr5bC2on0&ll=9.9293972,-84.13384620&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Waze"
                   className="w-8 h-8 p-1 rounded-full border border-white flex items-center justify-center"
                 >
-                  <img src="/icons/waze.svg" alt="" />
+                  <img src="/icons/waze.svg" alt="Waze" />
                 </Link>
               </div>
             </div>
