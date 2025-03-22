@@ -26,7 +26,10 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
       <div className="max-w-[1650px] md:px-10 mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center">
+          <Link
+            href="/"
+            className="flex items-center w-[120px] lg:w-[150px] h-auto"
+          >
             <Image
               src="/images/logo.png"
               className="w-[150px] h-auto"
@@ -36,7 +39,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav className="hidden text-[16px] md:flex items-center space-x-6">
+          <nav className="hidden text-[14px] lg:text-[16px] md:flex items-center space-x-6">
             <a
               href="#Inicio"
               onClick={(e) => scrollToSection(e, "Inicio")}
@@ -68,7 +71,7 @@ export default function Header() {
             <a
               href="#reservar"
               onClick={(e) => scrollToSection(e, "reservar")}
-              className="inline-block bg-white hover:bg-transparent border border-white hover:text-white text-[14px] md:text-[16px] lg:text-[18px] rounded-full px-6 py-3 text-sm font-medium transition-all text-black"
+              className="inline-block bg-white hover:bg-transparent border border-white hover:text-white text-[14px] lg:text-[16px] xl:text-[18px] rounded-full px-4 lg:px-6 py-2 lg:py-3 text-sm font-medium transition-all text-black"
             >
               Reservar Ahora
             </a>

@@ -20,7 +20,6 @@ export default function Home() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false); // Close mobile menu after clicking
     }
   };
 
@@ -52,7 +51,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="p-1 rounded-full border-2 border-white flex items-center justify-center"
+                className="p-1 rounded-full h-10 lg:h-auto lg:w-auto w-10 border-2 border-white flex items-center justify-center"
               >
                 <img src="/icons/facebook.svg" alt="Facebook" />
               </Link>
@@ -61,7 +60,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="p-1 rounded-full border-2 border-white flex items-center justify-center"
+                className="p-1 rounded-full border-2 h-10 lg:h-auto lg:w-auto w-10  border-white flex items-center justify-center"
               >
                 <img src="/icons/instagram.svg" alt="Instagram" />
               </Link>
@@ -70,24 +69,24 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Waze"
-                className="p-1 rounded-full border-2 border-white flex items-center justify-center"
+                className="p-1 rounded-full border-2 h-10 lg:h-auto lg:w-auto w-10 s border-white flex items-center justify-center"
               >
                 <img src="/icons/waze.svg" alt="Waze" />
               </Link>
             </div>
 
-            <h1 className="text-[32px] md:text-[44px] leading-[35px] md:leading-[46px] lg:leading-[66px] lg:text-[64px] font-[900] font-moderniz mb-4">
+            <h1 className="text-[32px] md:text-[40px] leading-[35px] md:leading-[46px] lg:leading-[66px] lg:text-[64px] font-[900] font-moderniz mb-4">
               TU ESPACIO DE
               <br />
               ENSAYO 24/7
             </h1>
-            <p className="max-w-md text-[14px] md:text-[16px] lg:text-[18px] mb-8">
+            <p className="max-w-md text-[14px] md:text-[15px] lg:text-[18px] mb-8">
               Bienvenido a tu estudio de música donde puedes practicar en un
               ambiente profesional y confortable con el mejor equipamiento.
             </p>
             <Link
               href="#reservar"
-              className="inline-block bg-white hover:bg-transparent border border-white hover:text-white text-[14px] md:text-[16px] lg:text-[18px] rounded-full px-6 py-3 text-sm font-medium transition-all text-black"
+              className="inline-block bg-white hover:bg-transparent border border-white hover:text-white text-[14px] md:text-[15px] lg:text-[18px] rounded-full px-6 py-3 text-sm font-medium transition-all text-black"
             >
               Reservar espacio
             </Link>
@@ -95,7 +94,7 @@ export default function Home() {
         </section>
 
         {/* Features Bar */}
-        <section className="bg-black text-[16px] md:text-[24px] min-h-[150px] border-t border-b border-[#9A9A9A]">
+        <section className="bg-black text-[16px] md:text-[20px] lg:text-[24px] min-h-[150px] border-t border-b border-[#9A9A9A]">
           <div className="max-w-[1650px] h-full mx-auto flex flex-nowrap overflow-x-auto md:grid md:grid-cols-3 md:overflow-x-hidden snap-x snap-mandatory">
             <div className="min-w-[80vw] md:min-w-0 py-4 px-6 text-center snap-center">
               <p className="min-h-[150px] font-[500] flex items-center justify-center uppercase tracking-wider">
@@ -118,9 +117,12 @@ export default function Home() {
         <section className="border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto min-h-screen xl:min-h-auto bg-black text-black relative overflow-hidden">
           <div className="flex flex-col md:flex-row h-full">
             {/* Left side - Image */}
-            <div className="w-full md:w-1/2 h-[400px] md:h-full relative">
+            <div className="w-full md:w-1/2 h-[400px] md:h-auto  relative">
               <div className="absolute top-8 right-8 z-10">
-                <img src="/icons/arrow.svg" className="w-8 h-8 text-white" />
+                <img
+                  src="/icons/arrow.svg"
+                  className="h-6 w-6 lg:w-8 lg:h-8 text-white"
+                />
               </div>
               <div
                 className="h-full w-full relative"
@@ -143,10 +145,10 @@ export default function Home() {
               className="w-full md:w-1/2 bg-white p-5 xl:p-8"
             >
               <div className="max-w-xl mx-auto">
-                <h2 className="font-moderniz text-[23px] md:text-[28px] lg:text-[51px] font-bold tracking-tight">
+                <h2 className="font-moderniz text-[23px] md:text-[25px] lg:text-[51px] font-bold tracking-tight">
                   NUESTRA HISTORIA
                 </h2>
-                <p className="text-[12px] md:text-[16px] lg:text-[18px] mb-6 leading-relaxed">
+                <p className="text-[12px] md:text-[15px] lg:text-[18px] mb-6 leading-relaxed">
                   Backline Studios nació antes de la pandemia, pero durante ella
                   evolucionamos para convertimos en un estudio de televisión
                   para streaming, podcasts, entre mucho otros. Hoy, volvemos a
@@ -158,7 +160,7 @@ export default function Home() {
                   ¿POR QUÉ NOSOTROS?
                 </h3>
 
-                <div className="space-y-4 text-[12px] md:text-[16px] lg:text-[18px]">
+                <div className="space-y-4 text-[12px] md:text-[15px] lg:text-[18px]">
                   <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
                     <div className="flex-shrink-0">
                       <div className="w-6 h-6 flex items-center justify-center">
@@ -199,7 +201,7 @@ export default function Home() {
         <section className="  bg-black lg:min-h-[600px] border-t border-b border-[#9A9A9A]">
           <div className="relative py-16 md:px-10 border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto flex flex-col justify-center items-center">
             <div className=" min-h-[250px] lg:min-h-[600px]  flex flex-col justify-center  px-4 max-w-5xl text-justify">
-              <p className="text-center text-white/80 text-[14px] md:text-[26px] lg:text-[40px] leading-relaxed">
+              <p className="text-center text-white/80 text-[14px] md:text-[22px] lg:text-[40px] leading-relaxed">
                 Nuestro objetivo es{" "}
                 <span className="font-bold text-white">romper barreras</span> y
                 ofrecerte un estudio donde puedas enfocarte en lo que realmente
@@ -219,12 +221,12 @@ export default function Home() {
               <div className="absolute md:px-20 font-moderniz bottom-5 md:bottom-10 lg:bottom-20 md:right-0 left-3 right-3 md:left-0 flex justify-between mt-24">
                 <div className="flex items-end gap-2">
                   <img src="/icons/lock.svg" />
-                  <span className="uppercase font-[900] text-[12px] md:text-[16px] lg:text-[20px] tracking-wider">
+                  <span className="uppercase font-[900] text-[12px] md:text-[15px] lg:text-[20px] tracking-wider">
                     LIBERTAD
                   </span>
                 </div>
                 <div className="flex items-end gap-2">
-                  <span className="uppercase font-[900] text-[12px] md:text-[16px] lg:text-[20px] tracking-wider">
+                  <span className="uppercase font-[900] text-[12px] md:text-[15px] lg:text-[20px] tracking-wider">
                     CREATIVIDAD
                   </span>
                   <img src="/icons/bulb.svg" />
@@ -240,12 +242,12 @@ export default function Home() {
         >
           <div className=" py-2 md:py-4 lg:py-6 mx-auto md:px-10 border-l border-r border-[#9A9A9A] max-w-[1650px]  px-4">
             <section className="relative  py-6 px-8 flex justify-center items-center">
-              <h2 className="font-moderniz text-[20px] md:text-[36px] lg:text-[64px] font-[900] tracking-wider">
+              <h2 className="font-moderniz text-[20px] md:text-[30px] lg:text-[64px] font-[900] tracking-wider">
                 NUESTROS SERVICIOS
               </h2>
               <img
                 src="/icons/arrow-down.svg"
-                className="absolute md:block right-0 top-0 hidden "
+                className="absolute md:block right-0 top-0 hidden h-6 w-6 lg:h-8 lg:w-8 "
               />
             </section>
           </div>
@@ -266,7 +268,7 @@ export default function Home() {
                 <h3 className="font-moderniz lg:text-[32px] font-[900] text-[20px] mb-4">
                   PARQUEO
                 </h3>
-                <p className="text-gray-400 text-[18px] leading-relaxed">
+                <p className="text-gray-400 text-[16px] lg:text-[18px] leading-relaxed">
                   Contamos con estacionamiento para hasta 30 vehículos,
                   asegurando comodidad y facilidad de acceso para todos los
                   músicos y su equipo.
@@ -284,7 +286,7 @@ export default function Home() {
                 <h3 className="font-moderniz lg:text-[32px] font-[900] text-[20px] mb-4">
                   SEGURIDAD 24/7
                 </h3>
-                <p className="text-gray-400 text-[18px] leading-relaxed">
+                <p className="text-gray-400 text-[16px] lg:text-[18px] leading-relaxed">
                   Nuestras instalaciones están monitoreadas con cámaras de
                   vigilancia y seguridad privada, para que ensayes sin
                   preocupaciones.
@@ -299,10 +301,10 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h3 className="font-moderniz lg:text-[32px] font-[900] text-[20px] mb-4">
+                <h3 className="font-moderniz  lg:text-[32px] font-[900] text-[20px] mb-4">
                   ESPACIOS
                 </h3>
-                <p className="text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-relaxed">
+                <p className="text-gray-400 text-[16px] lg:text-[18px] leading-relaxed">
                   Cada sala tiene 30m² de espacio, ideal para que bandas y
                   músicos individuales ensayen con total libertad y comodidad.
                 </p>
@@ -312,28 +314,89 @@ export default function Home() {
         </section>
 
         <section className="border-l border-r border-[#9A9A9A] max-w-[1650px] mx-auto min-h-screen xl:min-h-auto text-black relative overflow-hidden">
-          <div className="relative flex flex-col md:flex-row h-full">
-            {/* Image for Mobile and Medium Screens */}
-            <div className="xl:hidden w-full h-[400px] md:h-full">
-              <div className="relative h-full w-full">
-                <Image
-                  src="/images/section-2.png"
-                  alt="Guitarist performing"
-                  width={800}
-                  height={400}
-                  className="object-cover w-full h-full"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/70 to-yellow-600/30"></div>
-              </div>
-              <div className="absolute top-8 right-8 z-10">
-                <Globe className="w-8 h-8 text-white" />
+          <div className="flex flex-col md:flex-row h-full">
+            {/* Content Section */}
+            <div className="w-full md:w-1/2 bg-white p-5 xl:p-8 xl:bg-opacity-90 relative z-20">
+              <div className="max-w-xl mx-auto">
+                <h2 className="font-moderniz text-[23px] md:text-[25px] lg:text-[51px] font-[900] tracking-tight">
+                  SALAS DE ENSAYO
+                </h2>
+                <p className="text-[12px] md:text-[15px] lg:text-[18px] mb-6 leading-relaxed">
+                  Contamos con dos salas de ensayo totalmente equipadas,
+                  pensadas para brindarte la mejor calidad de sonido y
+                  comodidad. Cada espacio ha sido diseñado para que puedas
+                  concentrarte únicamente en tu música, sin distracciones ni
+                  complicaciones.
+                </p>
+                <h3 className="font-moderniz text-[20px] lg:text-[24px] font-[900] mb-3 xl:mb-6">
+                  EQUIPAMIENTO
+                </h3>
+                <div className="space-y-4 text-[12px] md:text-[15px] lg:text-[18px]">
+                  <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <img
+                          src="/icons/current-purple.svg"
+                          alt="Checkmark icon"
+                        />
+                      </div>
+                    </div>
+                    <p>Batería PDP Custom Maple / Yamaha Custom Stage</p>
+                  </div>
+                  <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <img
+                          src="/icons/current-purple.svg"
+                          alt="Checkmark icon"
+                        />
+                      </div>
+                    </div>
+                    <p>
+                      Amplificadores (VOX AC15 / Boss Katana / Marshall
+                      Valvestate)
+                    </p>
+                  </div>
+                  <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <img
+                          src="/icons/current-purple.svg"
+                          alt="Checkmark icon"
+                        />
+                      </div>
+                    </div>
+                    <p>3 Micrófonos Shure + cables XLR</p>
+                  </div>
+                  <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <img
+                          src="/icons/current-purple.svg"
+                          alt="Checkmark icon"
+                        />
+                      </div>
+                    </div>
+                    <p>Mixer Yamaha MG12 (12 canales)</p>
+                  </div>
+                  <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <img
+                          src="/icons/current-purple.svg"
+                          alt="Checkmark icon"
+                        />
+                      </div>
+                    </div>
+                    <p>Bose L1 para monitoreo</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Image for Large Screens (Desktop) */}
-            <div className="hidden xl:block absolute inset-0 w-full h-full">
-              <div className="relative h-full w-full">
+            {/* Image Section */}
+            <div className="w-full md:w-1/2 h-[400px] md:h-auto relative">
+              <div className="h-full w-full">
                 <Image
                   src="/images/section-2.png"
                   alt="Guitarist performing"
@@ -347,78 +410,6 @@ export default function Home() {
                 <Globe className="w-8 h-8 text-white" />
               </div>
             </div>
-
-            {/* Left side - Content */}
-            <div className="relative w-full md:w-1/2 bg-white p-5 xl:p-8 xl:bg-opacity-90 z-20">
-              <div className="max-w-xl mx-auto">
-                <h2 className="font-moderniz text-[23px] md:text-[28px] lg:text-[51px] font-[900] tracking-tight">
-                  SALAS DE ENSAYO
-                </h2>
-                <p className="text-base text-[12px] md:text-[16px] lg:text-[18px] mb-6 leading-relaxed">
-                  Contamos con dos salas de ensayo totalmente equipadas,
-                  pensadas para brindarte la mejor calidad de sonido y
-                  comodidad. Cada espacio ha sido diseñado para que puedas
-                  concentrarte únicamente en tu música, sin distracciones ni
-                  complicaciones.
-                </p>
-
-                <h3 className="font-moderniz text-[20px] lg:text-[24px] font-[900] mb-3 xl:mb-6">
-                  EQUIPAMIENTO
-                </h3>
-
-                <div className="space-y-4 text-[12px] md:text-[16px] lg:text-[18px]">
-                  <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-6 h-6 flex items-center justify-center">
-                        <img src="/icons/current-purple.svg" />
-                      </div>
-                    </div>
-                    <p className="">
-                      Batería PDP Custom Maple / Yamaha Custom Stage
-                    </p>
-                  </div>
-
-                  <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-6 h-6 flex items-center justify-center">
-                        <img src="/icons/current-purple.svg" />
-                      </div>
-                    </div>
-                    <p className="">
-                      Amplificadores (VOX AC15 / Boss Katana / Marshall
-                      Valvestate)
-                    </p>
-                  </div>
-
-                  <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-6 h-6 flex items-center justify-center">
-                        <img src="/icons/current-purple.svg" />
-                      </div>
-                    </div>
-                    <p className="">3 Micrófonos Shure + cables XLR</p>
-                  </div>
-
-                  <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-6 h-6 flex items-center justify-center">
-                        <img src="/icons/current-purple.svg" />
-                      </div>
-                    </div>
-                    <p className="">Mixer Yamaha MG12 (12 canales)</p>
-                  </div>
-
-                  <div className="border border-[#9A9A9A] rounded-md p-4 flex items-center gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-6 h-6 flex items-center justify-center">
-                        <img src="/icons/current-purple.svg" />
-                      </div>
-                    </div>
-                    <p className="">Bose L1 para monitoreo</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -427,12 +418,12 @@ export default function Home() {
         <div id="Reglamento" className="border-t text-center border-[#9A9A9A]">
           <div className=" mx-auto py-2 md:py-4 lg:py-6 md:px-10 border-l border-r border-[#9A9A9A] max-w-[1650px]  px-4">
             <section className="relative py-6 px-8 flex justify-center items-center">
-              <h2 className="font-moderniz text-[20px] md:text-[36px] lg:text-[64px] font-[900] tracking-wider">
+              <h2 className="font-moderniz text-[20px] md:text-[30px] lg:text-[64px] font-[900] tracking-wider">
                 REGLAMENTO
               </h2>
               <img
                 src="/icons/alert.svg"
-                className="absolute right-0 top-0 hidden md:block"
+                className="absolute right-0 top-0 hidden md:block h-12 w-12 lg:h-16 lg:w-16"
               />
             </section>
           </div>
@@ -463,9 +454,9 @@ export default function Home() {
                 </div>
 
                 {/* Right side - Rules */}
-                <div className="md:w-1/2 p-6 flex flex-col justify-center">
-                  <div className="space-y-3 text-[18px]">
-                    <div className="border border-[#9A9A9A] p-4">
+                <div className="md:w-1/2 p-3 lg:p-6 flex flex-col justify-center">
+                  <div className="space-y-3 text-[16px] md:text-[14px] lg:text-[18px]">
+                    <div className="border border-[#9A9A9A] p-2 lg:p-4">
                       <div className="flex items-center gap-3">
                         <span className="text-yellow-500 font-bold">[01]</span>
                         <p className="">
@@ -526,12 +517,12 @@ export default function Home() {
         <div id="Tarifas" className="border-b text-center border-[#9A9A9A]">
           <div className=" mx-auto py-3 md:py-5 lg:py-8 border-l border-r border-[#9A9A9A] md:px-10 max-w-[1650px]  px-4">
             <section className="relative  py-6 px-8 flex justify-center items-center">
-              <h2 className="font-moderniz text-[24px] md:text-[44px] lg:text-[96px] font-[900] tracking-wider">
+              <h2 className="font-moderniz text-[24px] md:text-[40px] lg:text-[96px] font-[900] tracking-wider">
                 EMPIEZA AHORA
               </h2>
               <img
                 src="/icons/expand.svg"
-                className="absolute right-0 top-0 hidden md:block"
+                className="absolute right-0 top-0 hidden md:block h-16 w-16 lg:w-auto lg:h-auto"
               />
             </section>
           </div>
